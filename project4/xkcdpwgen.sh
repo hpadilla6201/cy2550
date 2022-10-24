@@ -1,2 +1,2 @@
 #!/bin/sh
-python xkcdpwgen.py
+python3 xkcdpwgen.py
