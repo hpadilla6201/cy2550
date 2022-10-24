@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 
 import argparse
+import os
 import random
 from secrets import choice
 
-words = open("words.txt", "r").read().split("\n")
+# words = open("words.txt", "r").read().split("\n")
+__location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+words = open(os.path.join(__location__, 'words.txt')).read().split("\n")
 symbols = ["!", "?", "#", "$", ">", "<", "^", "@"]
 
 parser = argparse.ArgumentParser(
