@@ -9,7 +9,11 @@ from secrets import choice
 __location__ = os.path.realpath(
     os.path.join(os.getcwd(), os.path.dirname(__file__)))
 words = open(os.path.join(__location__, 'words.txt')).read().split("\n")
-symbols = ["!", "?", "#", "$", ">", "<", "^", "@"]
+symbols = [
+    '~', ':', "'", '+', '[', '\\', '@', '^', '{', '%', '(', '-', '"', '*', '|',
+    ',', '&', '<', '`', '}', '.', '_', '=', ']', '!', '>', ';', '?', '#', '$',
+    ')', '/'
+]
 
 parser = argparse.ArgumentParser(
     description='Generate a secure, memorable password using the XKCD method')
