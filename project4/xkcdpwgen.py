@@ -12,28 +12,28 @@ words = open(os.path.join(__location__, 'words.txt')).read().split("\n")
 symbols = ["!", "?", "#", "$", ">", "<", "^", "@"]
 
 parser = argparse.ArgumentParser(
-    description='Process some args for password generator.')
+    description='Generate a secure, memorable password using the XKCD method')
 parser.add_argument('-w',
                     '--words',
-                    metavar='include_words',
+                    metavar='WORDS',
                     type=int,
                     default=4,
                     help='include WORDS words in the password')
 parser.add_argument('-c',
                     '--caps',
-                    metavar='capitalize',
+                    metavar='CAPS',
                     type=int,
                     default=0,
                     help='capitalize the first letter of CAPS random words')
 parser.add_argument('-n',
                     '--numbers',
-                    metavar='insert numbers',
+                    metavar='NUMBERS',
                     type=int,
                     default=0,
                     help='insert NUMBERS random numbers in the password')
 parser.add_argument('-s',
                     '--symbols',
-                    metavar='capitalize',
+                    metavar='SYMBOLS',
                     type=int,
                     default=0,
                     help='insert SYMBOLS random symbols in the password')
