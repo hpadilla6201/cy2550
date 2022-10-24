@@ -2,9 +2,8 @@ import argparse
 from genericpath import isfile
 import random
 from secrets import choice
-from urllib.request import urlopen
 
-words = open("words.txt", "r").read().split("\n")
+words = open("./project4/words.txt", "r").read().split("\n")
 symbols = ["!", "?", "#", "$", ">", "<", "^", "@"]
 
 parser = argparse.ArgumentParser(
@@ -18,13 +17,13 @@ parser.add_argument('-w',
                     '--words',
                     metavar='include_words',
                     type=int,
-                    default=2,
+                    default=4,
                     help='include WORDS words in the password')
 parser.add_argument('-c',
                     '--caps',
                     metavar='capitalize',
                     type=int,
-                    default=2,
+                    default=0,
                     help='capitalize the first letter of CAPS random words')
 parser.add_argument('-n',
                     '--numbers',
