@@ -37,16 +37,11 @@ parser.add_argument('-s',
                     type=int,
                     default=0,
                     help='insert SYMBOLS random symbols in the password')
-# def get_args():
-
-# return parser.parse_args()
 
 
 def pass_gen(num_words, num_numbers, num_symbols, num_caps):
     password = ""
-    words_caps = []
     password_list = []
-    len_of = len(password_list)
 
     for _ in range(num_words):
         password_list.append(choice(words))
@@ -69,7 +64,7 @@ def pass_gen(num_words, num_numbers, num_symbols, num_caps):
 def main():
     args = parser.parse_args()
     if args.words < args.caps:
-        raise Exception("capitile letters cannot be greater than word count")
+        exit("capitale letters cannot be greater than word count")
 
     my_wordlist = pass_gen(num_words=args.words,
                            num_numbers=args.numbers,
