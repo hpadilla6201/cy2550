@@ -1,19 +1,14 @@
 #!/usr/bin/env python3
+
 import argparse
-from genericpath import isfile
 import random
 from secrets import choice
 
-words = open("./project4/words.txt", "r").read().split("\n")
+words = open("words.txt", "r").read().split("\n")
 symbols = ["!", "?", "#", "$", ">", "<", "^", "@"]
 
 parser = argparse.ArgumentParser(
     description='Process some args for password generator.')
-# parser.add_argument('-h',
-#                     '--help',
-#                     metavar='help',
-#                     type=int,
-#                     help='helper')
 parser.add_argument('-w',
                     '--words',
                     metavar='include_words',
