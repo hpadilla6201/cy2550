@@ -1,0 +1,23 @@
+# Last Modified: Wed Nov 16 00:32:18 2022
+abi <abi/3.0>,
+
+include <tunables/global>
+
+/home/hector/p2 flags=(audit) {
+  include <abstractions/base>
+
+  /home/hector/p2 mr,
+  /tmp/project* wr,
+  /home/hector/.project2/config wr,
+  /var/log/syslog r,
+  /etc/fstab r,
+  /proc/version r,
+  /proc/buddyinfo r,
+  /etc/crontab r,
+  /run/systemd/resolve/stub-resolv.conf r,
+  /etc/passwd r,
+  /etc/hosts r,
+  /home/hector/template r,
+  network tcp,
+
+}
